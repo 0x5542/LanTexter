@@ -1,0 +1,24 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0">
+  <id>distribution</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <dependencySets>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <useTransitiveDependencies>true</useTransitiveDependencies>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <fileMode>0644</fileMode>
+      <directoryMode>0755</directoryMode>
+      <outputDirectory>lib</outputDirectory>
+
+      <includes>
+        <include>net.sf.json-lib:json-lib</include>
+        <include>com.jgoodies:jgoodies-forms</include>
+      </includes>
+
+    </dependencySet>
+  </dependencySets>
+</assembly>
